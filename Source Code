@@ -1,0 +1,238 @@
+<nav class="navbar" id="navbar">
+  <div class="profile-banner">
+    <div class="profile-row">
+      <img class="profile-pic" src="/image/Unknown-4.jpg" alt="Ella Espiel">
+      <div class="profile-info">
+        <div class="title-row">
+          <h1 class="name">ELLA ESPIEL <span class="verified" aria-hidden="true">✔</span></h1>
+          <div class="meta">
+            <span class="location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="12" cy="9" r="2.4" fill="currentColor" />
+              </svg>
+              Cavite, Philippines
+            </span>
+          </div>
+          <div class="role">Canva Product Designer</div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn-white">Resume</button>
+          <button class="btn btn-outline">Send Email</button>
+        </div>
+      </div>
+    </div>
+    <div class="badge-wide-container">
+      <div class="badge-wide badge-achievements">
+        <div class="badge-text">
+          Academic Achievements 2025
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  :root {
+    --bg: #000;
+    --muted: #9b9b9b;
+    --white: #fff;
+    --accent1: #ffc117;
+    --accent2: #e8a23f;
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-banner {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .profile-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .profile-pic {
+    width: clamp(120px, 18vw, 160px);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  }
+
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+    color: var(--white);
+  }
+
+  .title-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .name {
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 800;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .verified {
+    background: #1da1f2;
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .location {
+    font-size: clamp(13px, 2.5vw, 16px);
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .role {
+    font-size: clamp(14px, 2.8vw, 18px);
+    color: #e6e6e6;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .btn-white {
+    border-radius: 3px;
+    background: white;
+    color: black;
+  }
+
+  .btn-outline {
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .badge-wide-container {
+    width: 100%;
+  }
+
+  .badge-wide {
+    background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    color: white;
+    font-weight: 700;
+    border-radius: 2px;
+    padding: 8px 14px;
+    box-shadow:
+      inset 0 0 10px rgba(255, 200, 100, 0.3), /* inner soft glow */
+      -6px 0 12px rgba(255, 200, 100, 0.4),   /* left glow */
+      6px 0 12px rgba(255, 150, 50, 0.35);    /* right glow */
+    border: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: default;
+    justify-content: center;
+    transition: box-shadow 0.3s ease;
+  }
+
+  /* Breathing Glow Animation */
+  .badge-achievements {
+    position: relative;
+    animation: glowBreathing 6s ease-in-out infinite;
+  }
+
+  @keyframes glowBreathing {
+    0% {
+      box-shadow:
+        inset 0 0 10px rgba(255, 200, 100, 0.3),
+        -6px 0 10px rgba(255, 200, 100, 0.35),
+        6px 0 10px rgba(255, 150, 50, 0.3);
+    }
+    50% {
+      box-shadow:
+        inset 0 0 14px rgba(255, 200, 100, 0.45),
+        -8px 0 16px rgba(255, 200, 100, 0.5),
+        8px 0 16px rgba(255, 150, 50, 0.45);
+    }
+    100% {
+      box-shadow:
+        inset 0 0 10px rgba(255, 200, 100, 0.3),
+        -6px 0 10px rgba(255, 200, 100, 0.35),
+        6px 0 10px rgba(255, 150, 50, 0.3);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .profile-banner {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile-row {
+      flex-grow: 1;
+    }
+
+    .badge-wide-container {
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .badge-wide {
+      white-space: nowrap;
+    }
+
+    .actions {
+      flex-wrap: nowrap;
+      gap: 10px;
+    }
+  }
+</style>
